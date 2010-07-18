@@ -3659,7 +3659,7 @@ void Aura::HandleAuraModStun(bool apply, bool Real)
             target->SetStandState(UNIT_STAND_STATE_STAND);// in 1.5 client
         }
 
-        if(!m_target->hasUnitState(UNIT_STAT_ON_VEHICLE))
+        if(!target->hasUnitState(UNIT_STAT_ON_VEHICLE))
         {
             WorldPacket data(SMSG_FORCE_MOVE_ROOT, 8);
             data << target->GetPackGUID();
@@ -7637,7 +7637,7 @@ m_auraFlags(AFLAG_NONE), m_auraLevel(1), m_procCharges(0), m_stackAmount(1)
     else
     {
         // remove this assert when not unit casters will be supported
-        ASSERT(caster->GetObjectGuid().IsUnit())
+        //ASSERT(caster->GetObjectGuid().IsUnit())
         m_caster_guid = caster->GetGUID();
     }
 
