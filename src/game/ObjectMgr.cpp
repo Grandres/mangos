@@ -17,7 +17,6 @@
  */
 
 #include "Common.h"
-#include "Dynamic/Int2SizeType.h"
 #include "Database/DatabaseEnv.h"
 #include "Database/SQLStorage.h"
 #include "Database/SQLStorageImpl.h"
