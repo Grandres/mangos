@@ -17,6 +17,7 @@
  */
 
 #include "Common.h"
+#include "Dynamic/Int2SizeType.h"
 #include "Database/DatabaseEnv.h"
 #include "Database/SQLStorage.h"
 #include "Database/SQLStorageImpl.h"
@@ -877,7 +878,7 @@ void ObjectMgr::ConvertCreatureAddonPassengers(CreatureDataAddon* addon, char co
     const_cast<CreatureDataAddonPassengers*&>(addon->passengers) = new CreatureDataAddonPassengers[val.size()/2+1];
 
     int i=0;
-    for(int j=0;j<val.size()/2;++j)
+    for(uint32 j = 0; j < val.size()/2; ++j)
     {
         CreatureDataAddonPassengers& cPas = const_cast<CreatureDataAddonPassengers&>(addon->passengers[i]);
         if(guidEntryStr == "Entry")
