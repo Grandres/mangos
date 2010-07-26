@@ -18,11 +18,13 @@
 
 #include "Common.h"
 #include "Log.h"
+#include "ObjectMgr.h"
 #include "Vehicle.h"
 #include "Unit.h"
 #include "Util.h"
 #include "WorldPacket.h"
 #include "InstanceData.h"
+#include "ZoneScript.h"
 
 Vehicle::Vehicle() : Creature(CREATURE_SUBTYPE_VEHICLE), m_vehicleId(0), m_vehicleInfo(NULL), m_spawnduration(0),
                      despawn(false), m_creation_time(0), m_VehicleData(NULL)
