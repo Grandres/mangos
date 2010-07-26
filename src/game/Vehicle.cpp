@@ -22,7 +22,10 @@
 #include "Vehicle.h"
 #include "Unit.h"
 #include "Util.h"
-
+#include "WorldPacket.h"
+#include "InstanceData.h"
+#include "ZoneScript.h"
+ 
 Vehicle::Vehicle() : Creature(CREATURE_SUBTYPE_VEHICLE), m_vehicleId(0)
 {
     m_updateFlag = (UPDATEFLAG_LIVING | UPDATEFLAG_HAS_POSITION | UPDATEFLAG_VEHICLE);
